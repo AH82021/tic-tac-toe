@@ -1,4 +1,4 @@
-let board = ["X","","","","","","","",""];
+let board = ["","","","","","","","",""];
 
 let currentPlayer = "X";
 
@@ -11,8 +11,8 @@ function checkWin(){
 
 const combos = [
   [0,1,2],[3,4,5],[6,7,8], // rows
- [0,3,6],[1,4,7],[2,5,8],
- [0,4,8],[2,4,6]
+ [0,3,6],[1,4,7],[2,5,8], // columns
+ [0,4,8],[2,4,6] //
 ]
 
 
@@ -36,13 +36,15 @@ for(let combo of combos ){
     return;
   }
 
-  if(!board.includes("")){
+ 
+
+}
+
+ if(!board.includes("")){
     gameOVer = true;
 
     alert("It is a draw!")
   }
-
-}
 
 
 }
